@@ -1,0 +1,46 @@
+// main: ../../../../../../style.scss
+&.tax-ministry-group {
+  .taxonomy-description {
+    text-align: center;
+  }
+
+  .taxonomy-container {
+    margin: 3.75rem auto 0;
+    .taxonomy-single {
+      .ministry-name {
+        margin: 0 0 0.5em !important;
+        .ministry-name-link {
+          text-decoration: none;
+          transition: color 0.25s ease-in;
+          &:hover, &:focus {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .ministry-text {
+        margin: 0;
+      }
+    }
+  }
+
+  .single-ministry-article {
+    .the-content {
+      padding: 1rem 3vw;
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
+      * {
+        color: var(--tab-content-color);
+      }
+    }
+  }
+
+  @media screen and (max-width: 1399px) {
+    .taxonomy-container {
+      .taxonomy-single {
+        .read-more-link {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}

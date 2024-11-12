@@ -1,0 +1,107 @@
+// main: ../../../../../style.scss
+.parishFlex {
+  margin: 0 auto;
+  @include flex('c',column,nowrap);
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+  .parishScroll {
+    width: 50%;
+    transform: rotate(90deg);
+    position: relative;
+    margin: 30px auto;
+    .carousel-arrows {
+      --buttons-arrow-size: 2.75rem;
+      @include flex('c', row, nowrap);
+      position: absolute;
+      transform: translate(-50%);
+      left: 50%;
+      bottom: -180%;
+      i {
+        cursor: pointer;
+        @include flex('c');
+        align-items: center;
+        border-radius: 50%;
+        color: var(--clr-primary);
+        font-size: 1rem;
+        width: var(--buttons-arrow-size);
+        height: var(--buttons-arrow-size);
+        margin-right: 1rem;
+        opacity: 0.75;
+        transition: background 0.25s ease-in, color 0.25s ease-in, opacity 0.25s ease-in;
+        &:last-child {
+          margin-right: 0;
+        }
+    
+        &:hover, &:focus {
+          background: var(--color-white);
+          color: var(--clr-primary);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.testimonials-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 100px;
+    height: 80px;
+    margin: 0 auto;
+    -webkit-perspective: 500px;
+    perspective: 500px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    .testimonial {
+      @include flex('fs', column, nowrap);
+      width: 80px;
+      visibility: hidden;
+      position: absolute;
+      top: -30%;
+      left: -115%;
+      display: none;
+      a {
+        text-decoration: none;
+      }
+      .testimonial-title {
+        margin: 0;
+        transform: rotate(-90deg);
+        width: 300px;
+      }
+      .testimonial-content {
+        font-size: 18px;
+      }
+      &.active {
+        display: block;
+      }
+    }
+}
+
+@media screen and (min-width: $laptop){
+  .parishFlex {
+    flex-direction: row;
+  }
+  .parishFlex h1 {
+    justify-content: flex-start;
+  }
+  .parishFlex .parishScroll {
+    margin: 0;
+    .carousel-arrows {
+      margin-bottom: 2.75rem;
+    }
+  }
+  .testimonials-carousel {
+    .testimonial {
+      top: -50%;
+      left: -200%;
+      .testimonial-title {
+        width: 480px;
+        text-align: center;
+      }
+    }
+  }
+}
+

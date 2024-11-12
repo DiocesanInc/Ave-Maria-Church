@@ -1,0 +1,26 @@
+// main: ../../../../../style.scss
+.page-template-homepage {
+    .parish-cluster,
+    .banner-container,
+    .featured-content-container,
+    .image-slider-container,
+    .news-container {
+        margin-bottom: 6rem;
+        &.calendar-container {
+          margin-bottom: 0;
+        }
+    }
+    @import "hero";
+    @import "featured-buttons";
+    @import "featured-buttons-parishes";
+    @import "banner2";
+    @import "banner";
+    @import "featured-content";
+    @import "image-slider";
+    @import "news";
+    @import "stats";
+    @import "lower-banner";
+    @import "calendar";
+    @import "parishes";
+    @import "parishes-carousel";
+}

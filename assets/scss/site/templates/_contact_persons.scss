@@ -1,0 +1,18 @@
+
+.contact-persons-container {
+  display: flex;
+  flex-direction: column;
+  .contact-person-wrapper {
+    margin-top: 25px;
+  }
+}
+@media screen and (min-width: 769px){
+  .contact-persons-container {
+    flex-direction: row;
+    .contact-person-wrapper {
+      max-width: 33%;
+      margin-left: 25px;
+      margin-top: 0;
+    }
+  }
+}
