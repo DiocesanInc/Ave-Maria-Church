@@ -146,3 +146,6 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
     __FILE__,
     'church-avemaria'
 );
+
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('main');
