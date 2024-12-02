@@ -43,13 +43,13 @@ $contentBackgroundColor = get_field("accordion_colors", "options") ? get_field("
 <div class="contact-persons-container">
     <?php foreach ($contacts as $contact) : ?>
     <?php
-            $c = $contact["contact"];
-            $isStaff = $contact["is_staff"];
+            $c = $contact["contact"] ?? '';
+            $isStaff = $contact["is_staff"] ?? '';
             $hasStaffImage = get_the_post_thumbnail_url($c) ? get_the_post_thumbnail_url($c) : get_template_directory_uri() . '/assets/img/person.jpg';
             $image = $isStaff ? $hasStaffImage : get_template_directory_uri() . '/assets/img/person.jpg';
-            $name = $isStaff ? $c->post_title : $contact["contact_name"];
-            $phone = $isStaff ? get_field("phone", $c) : $contact["contact_phone_number"];
-            $email = $isStaff ? get_field("email", $c) : $contact["contact_email"];
+            $name = $isStaff ? $c->post_title ?? '' : $contact["contact_name"] ?? '';
+            $phone = $isStaff ? get_field("phone", $c) : $contact["contact_phone_number"] ?? '';
+            $email = $isStaff ? get_field("email", $c) : $contact["contact_email"] ?? '';
             ?>
     <div class="contact-person-wrapper staff-single teaser-box flex-column">
         <?php if ($image) : ?>

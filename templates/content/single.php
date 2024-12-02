@@ -12,7 +12,7 @@ use Celine\Theme\Controllers\MinistriesController;
 use Celine\Theme\Controllers\TemplateController;
 
 $group = get_the_terms(get_post(), "ministry-group");
-$group = $group[0];
+$group = $group[0] ?? '';
 ?>
 
 <article class="entry-content limit-width">
