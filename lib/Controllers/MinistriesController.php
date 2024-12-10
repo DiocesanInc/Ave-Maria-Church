@@ -45,7 +45,8 @@ class MinistriesController
                 )
             ),
             "orderby" => "title",
-            "order" => "ASC"
+            "order" => "ASC",
+            "posts_per_page" => -1
         );
 
         $q = new \WP_Query($args);
