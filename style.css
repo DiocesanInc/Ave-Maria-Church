@@ -4,7 +4,7 @@
  Author:       Diocesan
  Author URI:   https://diocesan.com
  Description:  Ave Maria Church Theme
- Version:      1.0.6
+ Version:      1.0.7
  License:      GNU General Public License v3 or later, provided without any warranties—whether express or implied—and provided without any guarantees of fitness for a particular purpose or merchantability.
  License URI:  https://www.gnu.org/licenses/gpl-3.0.html
  Tags:         custom-background, custom-logo, custom-menu, Diocesan, DPI, featured-images, responsive-layout, threaded-comments, translation-ready
@@ -3865,8 +3865,11 @@ body.category .site-main > p {
   opacity: 0;
   visibility: hidden;
 }
+.ministries-container .ministry-slider .ministry-group .slick-track {
+  margin-left: 0;
+}
 .ministries-container .ministry-slider .ministry-group .slick-next {
-  right: -10%;
+  left: unset;
 }
 .ministries-container .ministry-slider .ministry-group .slick-prev {
   left: -10%;

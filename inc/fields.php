@@ -5581,48 +5581,48 @@ acf_add_local_field_group(array(
 	'description' => '*unused',
 ));
 
-// acf_add_local_field_group(array(
-// 	'key' => 'group_614a21943d2a9',
-// 	'title' => 'Ministries Page',
-// 	'fields' => array(
-// 		array(
-// 			'key' => 'field_614a219d13589',
-// 			'label' => 'Ministry Page Style',
-// 			'name' => 'ministry_is_slider',
-// 			'type' => 'true_false',
-// 			'instructions' => 'Choose whether the ministries overview page is a static funnel or interactive sliders',
-// 			'required' => 0,
-// 			'conditional_logic' => 0,
-// 			'wrapper' => array(
-// 				'width' => '',
-// 				'class' => '',
-// 				'id' => '',
-// 			),
-// 			'message' => '',
-// 			'default_value' => 1,
-// 			'ui' => 1,
-// 			'ui_on_text' => 'Slider',
-// 			'ui_off_text' => 'Funnel',
-// 		),
-// 	),
-// 	'location' => array(
-// 		array(
-// 			array(
-// 				'param' => 'page_template',
-// 				'operator' => '==',
-// 				'value' => 'templates/page-ministries.php',
-// 			),
-// 		),
-// 	),
-// 	'menu_order' => 0,
-// 	'position' => 'side',
-// 	'style' => 'default',
-// 	'label_placement' => 'top',
-// 	'instruction_placement' => 'label',
-// 	'hide_on_screen' => '',
-// 	'active' => true,
-// 	'description' => 'Ministry Overview Page Style (Funnel/Slider)',
-// ));
+acf_add_local_field_group(array(
+	'key' => 'group_614a21943d2a9',
+	'title' => 'Ministries Page',
+	'fields' => array(
+		array(
+			'key' => 'field_614a219d13589',
+			'label' => 'Ministry Page Style',
+			'name' => 'ministry_is_slider',
+			'type' => 'true_false',
+			'instructions' => 'Choose whether the ministries overview page is a static funnel or interactive sliders',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 1,
+			'ui' => 1,
+			'ui_on_text' => 'Slider',
+			'ui_off_text' => 'Funnel',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'templates/page-ministries.php',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'side',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => 'Ministry Overview Page Style (Funnel/Slider)',
+));
 
 acf_add_local_field_group(array(
 	'key' => 'group_5fc93af529e89',
