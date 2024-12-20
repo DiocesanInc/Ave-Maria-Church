@@ -15,7 +15,23 @@ use Celine\Theme\Controllers\TemplateController;
 
 <div class="ministry-slider entry-content max-width">
     <?php $groups = MinistriesController::getMinistryGroups();
-    foreach ($groups as $group) :
+    $ministryGroups = [];
+
+    foreach ($groups as $ministryGroup) {
+        $order = get_field("ministry_group_order", "ministry-group_$ministryGroup->term_id") ?? '';
+
+        if ($order !== "") {
+            $ministryGroups[$order] = $ministryGroup;
+        } else {
+            array_push($ministryGroups, $ministryGroup);
+        }
+    }
+
+    ksort($ministryGroups, SORT_NUMERIC);
+
+    $contactFormId = get_field("ministry_contact_form_id", "options") ? get_field("ministry_contact_form_id", "options")["id"] : 1;
+
+    foreach ($ministryGroups as $group) :
         $ministries = MinistriesController::getMinistriesByGroup($group->term_id); ?>
     <div class="ministry-group same-height">
         <h2 <?php echo TemplateController::animate("fade") ?>><?php echo $group->name; ?></h2>
