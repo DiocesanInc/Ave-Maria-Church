@@ -14,7 +14,7 @@
   if (get_sub_field("has_myParish")) :
     if (get_sub_field("myParish")) : $mpa = get_sub_field("myParish"); ?>
 <a href="<?= $mpa["url"] ? $mpa["url"] : "https://myparishapp.com/"; ?>"
-    class="social-media-link has-white-color has-secondary-color-hover"
+    class="social-media-link"
     target="<?= $mpa["target"] ? $mpa["target"] : ""; ?>" title="<?= $mpa["title"] ? $mpa["title"] : "myParish"; ?>">
     <i class="dpi-mpa"></i>
 </a>

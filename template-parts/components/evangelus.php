@@ -14,7 +14,7 @@
   if (get_sub_field("has_evangelus")) :
     if (get_sub_field("evangelus", "options")) : $eva = get_sub_field("evangelus", "options"); ?>
 <a href="<?= $eva["url"] ? $eva["url"] : "https://diocesan.com/evangelus/"; ?>"
-    class="social-media-link has-white-color has-secondary-color-hover"
+    class="social-media-link"
     target="<?= $eva["target"] ? $eva["target"] : ""; ?>" title="<?= $eva["title"] ? $eva["title"] : "Evangelus"; ?>">
     <i class="dpi-eva"></i>
 </a>

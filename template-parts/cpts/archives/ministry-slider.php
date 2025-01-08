@@ -61,12 +61,14 @@ use Celine\Theme\Controllers\TemplateController;
     <div class="lightbox-content">
         <h4 class="lightbox-title"></h4>
         <div class="lightbox-excerpt"></div>
-        <div class="contact-form-wrapper">
-            <h3>Interested?</h3>
-            <p>Let us know and we will get back to you.</p>
-            <div class="contact-form">
-                <?php echo MinistriesController::getContactForm(); ?></div>
-        </div>
-        <div class="lightbox-link"></div>
+        <?php if (MinistriesController::getMinistryContactFormId()) : ?>
+            <div class="contact-form-wrapper">
+                <h3>Interested?</h3>
+                <p>Let us know and we will get back to you.</p>
+                <div class="contact-form">
+                    <?php echo MinistriesController::getContactForm(); ?></div>
+            </div>
+            <div class="lightbox-link"></div>
+        <?php endif; ?>
     </div>
 </div>

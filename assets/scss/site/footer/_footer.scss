@@ -33,7 +33,7 @@
     .social-media-link-container {
         @include flex(c, row);
         .social-media-link-wrapper a {
-            color: white;
+            // color: white;
             text-decoration: none;
         }
         .social-media-link-wrapper a i {
