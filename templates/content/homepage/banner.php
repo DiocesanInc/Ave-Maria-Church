@@ -42,24 +42,6 @@ use Celine\Theme\Controllers\TemplateController;
               </h2>
             <?php endif; ?>
             <div class="mass-times grid col-2">
-                <?php if (get_field('weekend_masses','options')['sunday_times']) : ?>
-                <div class="mass-times-section">
-                    <h4 class="mass-times-title <?php echo "$fontColor"?>">
-                        Sunday
-                    </h4>
-                    <div class="mass-time">
-                    <?php if(have_rows('weekend_masses','options')):
-                        while(have_rows('weekend_masses','options')): the_row();?>
-                        <?php if(have_rows('sunday_times','options')):
-                          while(have_rows('sunday_times','options')): the_row();?>
-                          <div class="mass-time-time <?php echo "$fontColor"?>">
-                                <?php echo get_sub_field('sunday_time'); ?>
-                          </div>
-                        <?php endwhile; endif;?>
-                    <?php endwhile; endif;?>
-                    </div>
-                </div>
-                <?php endif; ?>
                 <?php if (get_field('weekend_masses','options')['saturday_times']) : ?>
                 <div class="mass-times-section">
                     <h4 class="mass-times-title <?php echo "$fontColor"?>">
@@ -72,6 +54,24 @@ use Celine\Theme\Controllers\TemplateController;
                           while(have_rows('saturday_times','options')): the_row();?>
                           <div class="mass-time-time <?php echo "$fontColor"?>">
                                 <?php echo get_sub_field('saturday_time'); ?>
+                          </div>
+                        <?php endwhile; endif;?>
+                    <?php endwhile; endif;?>
+                    </div>
+                </div>
+                <?php endif; ?>
+                <?php if (get_field('weekend_masses','options')['sunday_times']) : ?>
+                <div class="mass-times-section">
+                    <h4 class="mass-times-title <?php echo "$fontColor"?>">
+                        Sunday
+                    </h4>
+                    <div class="mass-time">
+                    <?php if(have_rows('weekend_masses','options')):
+                        while(have_rows('weekend_masses','options')): the_row();?>
+                        <?php if(have_rows('sunday_times','options')):
+                          while(have_rows('sunday_times','options')): the_row();?>
+                          <div class="mass-time-time <?php echo "$fontColor"?>">
+                                <?php echo get_sub_field('sunday_time'); ?>
                           </div>
                         <?php endwhile; endif;?>
                     <?php endwhile; endif;?>

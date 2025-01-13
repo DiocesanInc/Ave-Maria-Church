@@ -19,16 +19,6 @@
             Weekend Mass Times
         </h5>
         <div class="mass-time-wrapper">
-        <?php if (have_rows('sunday_times')) : ?>
-            <div class="mass-time">
-                <h6 class="mass-time-day">Sunday</h6>
-                <?php while(have_rows('sunday_times')): the_row();?>
-                  <div class="mass-time-time">
-                      <?php the_sub_field('sunday_time'); ?>
-                  </div>
-                <?php endwhile;?>
-            </div>
-        <?php endif; ?>
         <?php if (have_rows('saturday_times')) : ?>
             <div class="mass-time">
                 <h6 class="mass-time-day">Saturday</h6>
@@ -38,6 +28,16 @@
                     </div>
                   <?php endwhile;?>
                 </div>
+        <?php endif; ?>
+        <?php if (have_rows('sunday_times')) : ?>
+            <div class="mass-time">
+                <h6 class="mass-time-day">Sunday</h6>
+                <?php while(have_rows('sunday_times')): the_row();?>
+                  <div class="mass-time-time">
+                      <?php the_sub_field('sunday_time'); ?>
+                  </div>
+                <?php endwhile;?>
+            </div>
         <?php endif; ?>
         </div>
     </div>
